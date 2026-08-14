@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeDoc — PII Redaction</title>
+    <meta name="description" content="Redact personally identifiable information from DOCX documents." />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="eyebrow"><span></span> PRIVATE DOCUMENT PROCESSING</div>
+        <h1>Redact sensitive data<br /><em>in seconds.</em></h1>
+        <p>Upload a Word document and download a redacted copy with safe, synthetic replacements.</p>
+      </section>
+
+      <section class="card" aria-labelledby="upload-title">
+        <div class="card-heading">
+          <div class="icon">⌁</div>
+          <div><h2 id="upload-title">Upload document</h2><p>DOCX only · maximum file size 15 MB</p></div>
+        </div>
+        <label class="dropzone" id="dropzone" for="file">
+          <input id="file" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+          <strong id="file-label">Choose a DOCX file</strong>
+          <span>or drag and drop it here</span>
+        </label>
+        <button id="redact" type="button" disabled>Redact and download <b>→</b></button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="features" aria-label="Supported data types">
+        <p>Detects and replaces</p>
+        <div><span>Names</span><span>Email</span><span>Phone</span><span>Companies</span><span>Addresses</span><span>SSNs</span><span>Cards</span><span>DOBs</span><span>IP addresses</span></div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

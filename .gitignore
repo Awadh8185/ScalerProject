@@ -1,0 +1,5 @@
+# Assignment data and generated Word output stay local.
+*.docx
+__pycache__/
+*.pyc
+.vercel/
